@@ -1,7 +1,7 @@
 package org.scalajs.dom.experimental
 
 import org.scalajs.dom.experimental.mediastream._
-import org.scalajs.dom.raw.DOMException
+import org.scalajs.dom.DOMException
 
 import scala.scalajs.js
 import scala.language.implicitConversions

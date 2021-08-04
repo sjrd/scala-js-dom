@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 import scala.scalajs.js.typedarray.{ArrayBufferView, ArrayBuffer}
 import scala.scalajs.js.|
 
-import org.scalajs.dom.Blob
-import org.scalajs.dom.raw.{
-  DOMException, Event, EventInit, EventTarget, MessageEvent
+import org.scalajs.dom.{
+  Blob, DOMException, Event, EventInit, EventTarget, MessageEvent
 }
 import org.scalajs.dom.experimental.mediastream._
 

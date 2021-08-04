@@ -3,7 +3,7 @@ package org.scalajs.dom.experimental
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.EventTarget
 
 @js.native
 trait NotificationOptions extends js.Object {

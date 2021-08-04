@@ -3,7 +3,7 @@ package org.scalajs.dom.experimental.sharedworkers
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
-import org.scalajs.dom.raw.MessagePort
+import org.scalajs.dom.MessagePort
 import org.scalajs.dom.webworkers
 
 /**

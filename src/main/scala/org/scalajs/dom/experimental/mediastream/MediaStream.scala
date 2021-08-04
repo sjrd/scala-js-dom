@@ -6,7 +6,8 @@ package org.scalajs.dom.experimental.mediastream
 import scala.scalajs.js
 import scala.scalajs.js.|
 import scala.scalajs.js.annotation._
-import org.scalajs.dom.raw.{DOMException, Event, EventInit, EventTarget}
+
+import org.scalajs.dom.{Event, EventInit, EventTarget}
 
 /**
  * The MediaStream

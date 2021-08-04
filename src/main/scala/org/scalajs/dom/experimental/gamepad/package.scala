@@ -10,7 +10,7 @@ import org.scalajs.dom
  * [[https://www.w3.org/TR/2015/WD-gamepad-20151217/ W3C Working Draft]]
  */
 package object gamepad {
-  implicit def toGamepad(navigator: dom.raw.Navigator): GamepadNavigator =
+  implicit def toGamepad(navigator: dom.Navigator): GamepadNavigator =
     navigator.asInstanceOf[GamepadNavigator]
 
   final val `unknown` = "".asInstanceOf[GamepadMappingType]

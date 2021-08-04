@@ -3,13 +3,17 @@ package org.scalajs.dom
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 
+import org.scalajs.dom
+
+@deprecated("All the members of webworkers.* have been moved to dom.*",
+    "2.0.0")
 object webworkers {
-  type AbstractWorker = raw.AbstractWorker
-  type DedicatedWorkerGlobalScope = raw.DedicatedWorkerGlobalScope
-  type Worker = raw.Worker
-  type WorkerGlobalScope = raw.WorkerGlobalScope
-  type WorkerLocation = raw.WorkerLocation
-  type WorkerNavigator = raw.WorkerNavigator
+  type AbstractWorker = dom.AbstractWorker
+  type DedicatedWorkerGlobalScope = dom.DedicatedWorkerGlobalScope
+  type Worker = dom.Worker
+  type WorkerGlobalScope = dom.WorkerGlobalScope
+  type WorkerLocation = dom.WorkerLocation
+  type WorkerNavigator = dom.WorkerNavigator
 
   @js.native
   @JSGlobalScope
@@ -22,5 +26,4 @@ object webworkers {
      */
     def self: DedicatedWorkerGlobalScope = js.native
   }
-
 }

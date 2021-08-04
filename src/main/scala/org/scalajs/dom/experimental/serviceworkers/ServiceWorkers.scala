@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 
+import org.scalajs.dom.{
+  ErrorEvent, Event, EventInit, EventTarget, MessageEvent, MessagePort,
+  WorkerGlobalScope
+}
 import org.scalajs.dom.experimental.{
   Notification, NotificationOptions, Request, RequestInfo, Response, Sequence
 }
-import org.scalajs.dom.raw.{WorkerGlobalScope, ErrorEvent}
 import org.scalajs.dom.webgl.RenderingContext
-import org.scalajs.dom.{Event, EventTarget, MessageEvent, MessagePort}
-import org.scalajs.dom.raw.EventInit
 
 @js.native
 sealed trait FrameType extends js.Any

@@ -1,7 +1,6 @@
 package org.scalajs.dom.experimental
 
-import org.scalajs.dom.Blob
-import org.scalajs.dom.raw.FormData
+import org.scalajs.dom.{Blob, FormData}
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
