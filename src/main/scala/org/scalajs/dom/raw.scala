@@ -81,7 +81,7 @@ object raw {
   type DOMException = dom.DOMException
   type DOMImplementation = dom.DOMImplementation
   lazy val DOMException: dom.DOMException.type = dom.DOMException
-  type DOMList[T] = dom.DOMList[T]
+  type DOMList[+T] = dom.DOMList[T]
   type DOMParser = dom.DOMParser
   type DOMRect = dom.DOMRect
   type DOMRectList = dom.DOMRectList
@@ -238,8 +238,8 @@ object raw {
   type NodeFilter = dom.NodeFilter
   lazy val NodeFilter: dom.NodeFilter.type = dom.NodeFilter
   type NodeIterator = dom.NodeIterator
-  type NodeList = dom.NodeList
-  type NodeListOf[TNode <: Node] = dom.NodeListOf[TNode]
+  type NodeList[+T <: Node] = dom.NodeList[T]
+  type NodeListOf[+T <: Node] = NodeList[T]
 
   type OfflineAudioContext = dom.OfflineAudioContext
   type OscillatorNode = dom.OscillatorNode

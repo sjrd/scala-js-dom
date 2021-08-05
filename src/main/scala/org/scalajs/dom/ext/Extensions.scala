@@ -13,30 +13,6 @@ import org.scalajs.dom
 import org.scalajs.dom.{Blob, FormData, KeyboardEvent}
 
 /**
- * Used to extend out javascript *Collections to make them usable as normal
- * Scala Seq[*]s
- */
-class EasySeq[T](jsLength: Int, jsApply: Int => T)
-    extends scala.collection.Seq[T] {
-
-  def length = jsLength
-
-  def apply(x: Int) = jsApply(x)
-
-  def iterator = new Iterator[T] {
-    var index = 0
-
-    def hasNext: scala.Boolean = index < jsLength
-
-    def next() = {
-      val res = jsApply(index)
-      index += 1
-      res
-    }
-  }
-}
-
-/**
  * A list of the codes returned by KeyEvents.
  */
 object KeyCode {
