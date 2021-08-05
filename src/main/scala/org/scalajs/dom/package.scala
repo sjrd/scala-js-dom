@@ -32,4 +32,10 @@ package object dom {
   @js.native
   @JSGlobal("console")
   val console: Console = js.native
+
+  @deprecated("use DOMRect instead", "2.0.0")
+  type ClientRect = DOMRect
+
+  @deprecated("use DOMRectList instead", "2.0.0")
+  type ClientRectList = DOMRectList
 }

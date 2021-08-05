@@ -532,7 +532,7 @@ trait NodeSelector extends js.Object {
 
 @js.native
 @JSGlobal
-class ClientRect extends js.Object {
+class DOMRect extends js.Object {
   var left: Double = js.native
   var width: Double = js.native
   var right: Double = js.native
@@ -884,7 +884,7 @@ abstract class Element
    *
    * MDN
    */
-  def getBoundingClientRect(): ClientRect = js.native
+  def getBoundingClientRect(): DOMRect = js.native
 
   /**
    * getAttributeNS returns the string value of the attribute with the specified
@@ -948,7 +948,7 @@ abstract class Element
    *
    * MDN
    */
-  def getClientRects(): ClientRectList = js.native
+  def getClientRects(): DOMRectList = js.native
 
   /**
    * setAttributeNode() adds a new Attr node to the specified element.
@@ -4666,13 +4666,13 @@ class Range extends js.Object {
   def detach(): Unit = js.native
 
   /**
-   * The Range.getBoundingClientRect() method returns a ClientRect object that
+   * The Range.getBoundingClientRect() method returns a DOMRect object that
    * bounds the contents of the range; this a rectangle enclosing the union of the
    * bounding rectangles for all the elements in the range.
    *
    * MDN
    */
-  def getBoundingClientRect(): ClientRect = js.native
+  def getBoundingClientRect(): DOMRect = js.native
 
   /**
    * The Range.compareBoundaryPoints() method compares the boundary points of the
@@ -4735,7 +4735,7 @@ class Range extends js.Object {
    *
    * MDN
    */
-  def getClientRects(): ClientRectList = js.native
+  def getClientRects(): DOMRectList = js.native
 
   /**
    * The Range.surroundContents() method moves content of the Range into a new node,
@@ -6763,7 +6763,7 @@ trait LinkStyle extends js.Object {
 
 @js.native
 @JSGlobal
-class ClientRectList extends DOMList[ClientRect]
+class DOMRectList extends DOMList[DOMRect]
 
 @js.native
 trait External extends js.Object

@@ -47,8 +47,8 @@ object raw {
   type ChannelMergerNode = dom.ChannelMergerNode
   type ChannelSplitterNode = dom.ChannelSplitterNode
   type CharacterData = dom.CharacterData
-  type ClientRect = dom.ClientRect
-  type ClientRectList = dom.ClientRectList
+  type ClientRect = dom.DOMRect
+  type ClientRectList = dom.DOMRectList
   type ClipboardEvent = dom.ClipboardEvent
   type ClipboardEventInit = dom.ClipboardEventInit
   type CloseEvent = dom.CloseEvent
@@ -83,6 +83,8 @@ object raw {
   lazy val DOMException: dom.DOMException.type = dom.DOMException
   type DOMList[T] = dom.DOMList[T]
   type DOMParser = dom.DOMParser
+  type DOMRect = dom.DOMRect
+  type DOMRectList = dom.DOMRectList
   type DOMSettableTokenList = dom.DOMSettableTokenList
   type DOMStringList = dom.DOMStringList
   type DOMTokenList = dom.DOMTokenList
