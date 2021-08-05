@@ -1,4 +1,4 @@
-package org.scalajs.dom.ext
+package org.scalajs.dom
 
 import java.nio.ByteBuffer
 
@@ -9,14 +9,11 @@ import scala.scalajs.js
 import scala.scalajs.js.typedarray._
 import scala.scalajs.js.typedarray.TypedArrayBufferOps._
 
-import org.scalajs.dom
-import org.scalajs.dom.{Blob, FormData}
-
 /**
  * Thrown when `Ajax.get` or `Ajax.post` receives a non-20X response code.
  * Contains the XMLHttpRequest that resulted in that response
  */
-case class AjaxException(xhr: dom.XMLHttpRequest) extends Exception {
+case class AjaxException(xhr: XMLHttpRequest) extends Exception {
   def isTimeout = xhr.status == 0 && xhr.readyState == 4
 }
 
@@ -90,11 +87,11 @@ object Ajax {
 
   def apply(method: String, url: String, data: InputData, timeout: Int,
       headers: Map[String, String], withCredentials: Boolean,
-      responseType: String): Future[dom.XMLHttpRequest] = {
-    val req = new dom.XMLHttpRequest()
-    val promise = Promise[dom.XMLHttpRequest]()
+      responseType: String): Future[XMLHttpRequest] = {
+    val req = new XMLHttpRequest()
+    val promise = Promise[XMLHttpRequest]()
 
-    req.onreadystatechange = { (e: dom.Event) =>
+    req.onreadystatechange = { (e: Event) =>
       if (req.readyState == 4) {
         if ((req.status >= 200 && req.status < 300) || req.status == 304)
           promise.success(req)

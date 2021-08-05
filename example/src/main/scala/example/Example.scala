@@ -123,7 +123,7 @@ object XMLHttpRequest{
   @JSExport
   def main(pre: html.Pre) = {
     val xhr = new dom.XMLHttpRequest()
-    xhr.open("GET", 
+    xhr.open("GET",
       "https://www.boredapi.com/api/activity"
     )
     xhr.onload = { (e: dom.Event) =>
@@ -160,14 +160,13 @@ object Websocket {
 object AjaxExtension {
   @JSExport
   def main(pre: html.Pre) = {
-    import dom.ext.Ajax
     import scala.concurrent
                 .ExecutionContext
                 .Implicits
                 .global
     val url =
       "https://www.boredapi.com/api/activity"
-    Ajax.get(url).foreach { case xhr =>
+    dom.Ajax.get(url).foreach { case xhr =>
       pre.textContent = xhr.responseText
     }
   }
