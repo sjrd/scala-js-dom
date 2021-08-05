@@ -9,6 +9,10 @@
  */
 package org.scalajs.dom
 
+import scala.language.implicitConversions
+
+import scala.collection.mutable
+
 import scala.scalajs.js
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.typedarray.ArrayBuffer
@@ -6080,6 +6084,12 @@ class NamedNodeMap extends js.Object {
   def getNamedItemNS(namespaceURI: String, localName: String): Attr = js.native
 
   def setNamedItemNS(arg: Attr): Attr = js.native
+}
+
+object NamedNodeMap {
+  implicit def namedNodeMapAsMap(
+      namedNodeMap: NamedNodeMap): mutable.Map[String, Attr] =
+    new NamedNodeMapMap(namedNodeMap)
 }
 
 @js.native
