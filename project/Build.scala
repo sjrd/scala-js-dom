@@ -55,6 +55,7 @@ object Build {
     .configure(commonSettings, crossScala, preventPublication)
     .settings(
       libraryDependencies += Dep.scalafixCore.value,
+      allowUnsafeScalaLibUpgrade := true,
     )
 
   lazy val testsShared = project
